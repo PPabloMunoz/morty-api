@@ -1,14 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import Button from './components/button'
 
-const getData = (page = 1) => {
-  return fetch(`https://rickandmortyapi.com/api/character/?page=${page}`).then(
-    (res) => res.json()
-  )
-}
+import { fetchPosts } from './utils'
 
 export default async function HomePage() {
-  const char = await getData()
+  const char = await fetchPosts()
   const data = char.results
   // console.log(data)
   // const info = char.info
@@ -16,7 +13,7 @@ export default async function HomePage() {
 
   return (
     <>
-      <div className='grid grid-cols-3 gap-5 bg-[#202329] p-4'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-5 xl:grid-cols-3 bg-[#202329] p-4 self-stretch'>
         {data.map((e) => {
           return (
             <Link key={e.id} href={'/' + e.id}>
@@ -50,6 +47,10 @@ export default async function HomePage() {
           )
         })}
       </div>
+      {/* <div className='w-full flex flex-row justify-around items-center bg-[#202329] p-4'>
+        <Button text='<' info={info} />
+        <Button text='>' />
+      </div> */}
     </>
   )
 }
