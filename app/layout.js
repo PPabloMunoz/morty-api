@@ -18,12 +18,12 @@ export default function RootLayout({ children }) {
           <Image
             src={logo}
             alt='Logo'
-            className='h-24 w-24 absolute left-0'
+            className='h-24 w-24 absolute left-0 hidden sm:block'
             height={1000}
             width={1000}
           />
           <Link href='/'>
-            <h1 className='text-5xl text-center font-bold'>
+            <h1 className='sm:text-5xl text-center font-bold text-3xl'>
               Rick and Morty Api
             </h1>
           </Link>
