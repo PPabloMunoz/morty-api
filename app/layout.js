@@ -1,7 +1,9 @@
-import '../styles/globals.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import Head from './head'
+import '../styles/globals.css'
 
+// import logoSVG from '../public/logo.svg'
 import logo from '../public/logo.png'
 import github from '../public/footer/github.png'
 import linkedin from '../public/footer/linkedin.png'
@@ -9,10 +11,7 @@ import linkedin from '../public/footer/linkedin.png'
 export default function RootLayout({ children }) {
   return (
     <html>
-      <head>
-        <title>Rick and Morty Api</title>
-        <link rel='icon' type='image/png' href={logo} />
-      </head>
+      <Head />
       <body>
         <div className='flex flex-row justify-center items-center my-5'>
           <Image
