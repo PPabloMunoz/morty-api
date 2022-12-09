@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 const getData = (id) => {
   return fetch(`https://rickandmortyapi.com/api/character/${id}`).then((res) =>
@@ -8,10 +9,9 @@ const getData = (id) => {
 
 export default async function character({ params }) {
   const res = await getData(params.id)
-  // console.log(res)
   return (
     <div className='bg-[#202329] text-white flex flex-col justify-evenly items-center h-[700px]'>
-      <header className='mb-4 '>
+      <header className='mb-4'>
         <Image
           src={res.image}
           className='w-72 rounded-xl p-4'
@@ -54,6 +54,11 @@ export default async function character({ params }) {
           </p>
         </div>
       </main>
+      <Link href='/'>
+        <button className='px-4 py-2 bg-[#191D24] rounded text-lg'>
+          Volver
+        </button>
+      </Link>
     </div>
   )
 }
