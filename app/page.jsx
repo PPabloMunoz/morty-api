@@ -1,15 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
-// import Button from './components/button'
 
 import { fetchPosts } from './utils'
 
 export default async function HomePage() {
   const char = await fetchPosts()
   const data = char.results
-  // console.log(data)
-  // const info = char.info
-  // console.log(info)
 
   return (
     <>
@@ -21,7 +17,7 @@ export default async function HomePage() {
                 <Image
                   src={e.image}
                   alt='character img'
-                  className='h-full w-44 object-fill rounded-lg'
+                  className='h-full w-1/2 object-fill rounded-lg'
                   width={1000}
                   height={1000}
                 />
@@ -47,10 +43,6 @@ export default async function HomePage() {
           )
         })}
       </div>
-      {/* <div className='w-full flex flex-row justify-around items-center bg-[#202329] p-4'>
-        <Button text='<' info={info} />
-        <Button text='>' />
-      </div> */}
     </>
   )
 }

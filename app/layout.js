@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     <html>
       <Head />
       <body>
-        <div className='flex flex-row justify-center items-center my-5'>
+        <header className='flex flex-row justify-center items-center my-5'>
           <Image
             src={logo}
             alt='Logo'
@@ -26,9 +26,11 @@ export default function RootLayout({ children }) {
               Rick and Morty Api
             </h1>
           </Link>
-        </div>
+        </header>
+
         {children}
-        <footer className='bg-white text-black h-24 p-2 bottom-0 w-screen pt-5'>
+
+        <footer className='h-24 p-2 bottom-0 w-screen pt-5'>
           <p className='text-center mb-4'>Created by Pablo Muñoz with 💓</p>
           <div className='flex flex-row justify-center items-center'>
             <Link href='#'>
