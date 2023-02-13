@@ -1,5 +1,5 @@
 
-# Pokemon Api
+# Rick and Morty API
 
 Web app using [Rick && Morty Api](https://rickandmortyapi.com/)
 
