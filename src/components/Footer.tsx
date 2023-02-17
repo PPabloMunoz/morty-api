@@ -8,15 +8,15 @@ export default function Footer() {
     <footer className='h-24 p-2 bottom-0 w-screen my-5'>
       <p className='text-center mb-4'>Created by Pablo Muñoz with 💓</p>
       <div className='flex flex-row justify-center items-center gap-5'>
-        <Link
-          href='#'
+        <div
+          className='cursor-pointer'
           onClick={() =>
             toast('Porfolio Website will be aviable soon', {
               icon: 'ℹ️',
             })
           }>
           <Logo />
-        </Link>
+        </div>
         <Link
           href='https://github.com/ppablomunoz'
           target='_blank'
