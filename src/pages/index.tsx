@@ -57,9 +57,14 @@ export default function Home() {
       </Head>
 
       <header className='w-full py-4 bg-slate-700 relative'>
-        <Link href='/'>
-          <h1 className='text-center font-bold text-5xl'>Rick and Morty API</h1>
-        </Link>
+        <h1
+          className='text-center font-bold text-5xl cursor-pointer'
+          onClick={() => {
+            setPage(1)
+            getCharacters()
+          }}>
+          Rick and Morty API
+        </h1>
         <div className='absolute top-[2px] left-3 w-14'>{headerLogo}</div>
       </header>
 
