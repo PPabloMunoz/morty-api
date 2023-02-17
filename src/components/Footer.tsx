@@ -11,7 +11,7 @@ export default function Footer() {
         <Link
           href='#'
           onClick={() =>
-            toast('Web will be aviable soon', {
+            toast('Porfolio Website will be aviable soon', {
               icon: 'ℹ️',
             })
           }>
